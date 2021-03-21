@@ -11,7 +11,9 @@ app.get('/', (req, res) => {
 app.get('/features', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'static', 'features.html'))
 })
-
+app.get('/download', (req, res) => {
+    res.download(path.resolve(__dirname, 'static', 'index.html'))
+})
 
 app.listen(PORT, () => {
     console.log(`Server has been running on port ${PORT}...`)
