@@ -8,6 +8,7 @@ const app = express()
 
 app.use(express.static(path.resolve(__dirname, 'static')))
 app.use(requestTime)
+app.use(logger)
 
 // app.get('/', (req, res) => {
 //    // res.send('<h1>Hello Express</h1>')
